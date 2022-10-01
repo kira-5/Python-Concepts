@@ -1,0 +1,29 @@
+# Ignore Logs
+logs
+*.log
+
+
+# The file containing environment variables 
+.env
+
+
+# Ignore IDE specific files
+.vscode/
+
+# Demo File
+demo.py
+
+# Virtual environmen : Concurrency
+concurrency/venv-concurrency/
+
+
+# Reponse output file
+concurrency/download_files/
+
+
+# Virtual environmen : Logging
+logger/venv-logging/
+
+
+# Virtual environmen : gcp-Logging
+Logger/gcp-logging/venv-gcp_logging/
