@@ -1,0 +1,21 @@
+1. ) Using Filter
+            - Have to pass key in formatter
+            - if extra is not passed in logger.info then data will not show
+
+2.) LoggerAdapter
+            - Have to pass key in formatter
+            - If extra will not pass then also data is showing for that logger
+
+3. Custom LoggerAdapter
+- https://docs.python.org/3/howto/logging-cookbook.html#using-loggeradapters-to-impart-contextual-information
+          - Use when no need to change formatter
+          - Don't want to pass extra field in looging.info('message)
+
+
+4.) LogRecordFactory
+              -  This is particularly useful when you can't change the format OR if your format is shared with code that does not send the unique key (in your case app_name):
+
+Why is that better than using Adapters / Filters?
+    - You do not need to pass your logger around the application
+    - It actually works with 3rd party libraries that use their own logger (by just calling logger = logging.getLogger(..)) would now have the same log format. (this is not the case with Filters / Adapters where you need to be using the same logger object)
+    - You can stack/chain multiple factories

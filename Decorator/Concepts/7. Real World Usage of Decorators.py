@@ -1,0 +1,47 @@
+"""
+    ! Real World Usage of Decorators:
+       
+       ? One real-world usage of decorators in Python is to measure the execution time of a function.
+       
+       * Other Use Cases of Decorators:
+            ? Authorization in Python frameworks like Flask and Django.
+            ? Logging and debugging code.
+            ? Caching return values of a function.
+            ? Validating JSON (JavaScript Object Notation).
+
+"""
+import functools
+from time import time, sleep
+
+
+def measure(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        t = time()
+        func(*args, **kwargs)
+        execution_time = time() - t
+        print(f"{func.__name__} took {execution_time}")
+    return wrapper
+
+
+@measure
+def sleepy_function(sleep_time):
+    sleep(sleep_time)
+
+
+if __name__ == '__main__':
+    sleepy_function(0.3)
+
+
+"""
+    ! Explanation:
+    
+       ? The wrapper function of the measure decorator uses the time function from the time module to calculate the time difference between the start and end of the function execution and then print that on the console.
+     
+        ? The sleepy function is used just for illustration, it uses the sleep function from the time module to freeze the execution for a certain amount of time. We can measure the execution time of any other function in the same way.
+"""
+
+"""
+        ! Takeaway:
+            * Decorators in Python have several real-world usages like measuring execution time, authentication, logging, etc.
+    """
