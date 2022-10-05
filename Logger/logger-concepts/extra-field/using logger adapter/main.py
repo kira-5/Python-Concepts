@@ -1,4 +1,4 @@
-import imp
+
 import logging
 from my_app import app
 
