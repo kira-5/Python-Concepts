@@ -1,6 +1,5 @@
-import logging
+
 from helpers.logger import customLogger
-from helpers import logger
 
 
 def do_something():
