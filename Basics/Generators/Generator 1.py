@@ -3,10 +3,7 @@
 # generator
 
 def makeList(n):
-    result = []
-    for i in range(n):
-        result.append(i)
-    return result
+    return list(range(n))
 
 
 res = makeList(100)

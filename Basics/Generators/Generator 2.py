@@ -12,8 +12,7 @@
 
 
 def generatorFunc(n):
-    for i in range(n):
-        yield i
+    yield from range(n)
 
 
 for item in generatorFunc(10000):
