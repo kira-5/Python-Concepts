@@ -34,16 +34,14 @@ def make_list1():
 def make_list2():
     '''List comprehension'''
 
-    my_list = [l for l in range(100000)]
+    my_list = list(range(100000))
 
 
 @measure_performance
 def make_list3():
     '''Append'''
 
-    my_list = []
-    for item in range(100000):
-        my_list.append(item)
+    my_list = list(range(100000))
 
 
 @measure_performance

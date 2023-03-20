@@ -16,7 +16,7 @@ def a_function_that_returns_a_string():
 
 @log_message
 def a_function_that_returns_a_strings_with_a_newline(s):
-    return "{}\n".format(s)
+    return f"{s}\n"
 
 
 a_function_that_returns_a_string()
