@@ -27,3 +27,5 @@ logger/venv-logging/
 
 # Virtual environmen : gcp-Logging
 Logger/gcp-logging/venv-gcp_logging/
+
+*.venv

@@ -34,6 +34,9 @@ if __name__ == "__main__":
     print("-" * 10)
     modify_attributes()
 
+
+# We can skip the self as a parameter in a method by using the static method in python decorator on the method of the class.
+
 # Accessing Instance Attributes: Instance attributes are accessed using dot notation on instances of the class.
 
 # Modifying Instance Attributes: Instance attributes can be modified directly using dot notation on instances of the class.

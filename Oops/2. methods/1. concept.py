@@ -93,9 +93,25 @@ if __name__ == "__main__":
     # Instance Methods:
     #     Purpose: Instance methods are used when the method needs access to or manipulates the instance's state (attributes). They are closely tied to individual instances of a class.
     #     When to use: Use instance methods when you need to perform operations that involve the specific attributes of an instance. For example, calculating properties based on instance attributes, modifying instance attributes, or performing actions specific to that instance.
+    
     # Class Methods:
+    # classmethod() accepts a single parameter, function that is to be converted into classmethod.
+    # The classmethod() returns a class method for a given function passed.
+    # Class method is tied to its class rather than the instances created with that class. class methods can access class variables and methods.
+    # classmethods can be called from either class itself (or) instance.
+    # It receives the class (cls) as the first argument instead of the instance (self).
     #     Purpose: Class methods are used when the method needs to operate on the class itself rather than on instances. They are often used for alternative constructors or for operations that affect the class as a whole.
     #     When to use: Use class methods when the operation is related to the class as a whole rather than to individual instances. For example, creating instances of the class with specific properties, accessing or modifying class variables, or performing operations that don't require instance attributes.
+    # Use cases:
+    # Alternative constructors.
+    # Factory methods.
+    # Accessing or modifying class-level attributes.
+    
     # Static Methods:
     #     Purpose: Static methods are used when the method does not access or modify instance or class state. They are independent of both instances and classes and are often used for utility functions.
     #     When to use: Use static methods when the operation is not related to any specific instance or class, and does not depend on instance or class attributes. For example, performing general-purpose calculations, formatting data, or implementing helper functions.
+    # The @staticmethod decorator is used to define static methods within a class.
+    # It does not receive any implicit first argument (neither self nor cls).
+    # Use case: 
+        # Grouping utility functions related to the class.
+        # Methods that do not need access to instance or class attributes.
